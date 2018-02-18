@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Search</title>
+<script type= "text/javascript">
+function active(){
+var searchBar=document.getElementById('searchBar');
+if(searchBar.value == '')
+{
+searchBar.value='Search...'
+searchBar.placeholder=''
+}
+}
+function inactive(){
+var searchBar=document.getElementById('searchBar');
+if(searchBar.value == 'Search...')
+{
+searchBar.value= ''
+searchBar.placeholder= 'Search...'
+}
+}
+</script>
+<style>
+#searchBar{
+border: ipx solid #000000;
+border-right: none;
+font-size: 16px;
+padding: 10px;
+outline: none;
+width:250px;
+-webkit-border-top-left-radius: 10px;
+-webkit-border-bottom-left-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+}
+#searchBtn{
+border: ipx solid #000000;
+font-size: 16px;
+padding: 10px;
+background: #f1d829;
+font-weight: bold;
+cursor: pointer;
+outline: none;
+-webkit-border-top-right-radius: 10px;
+-webkit-border-bottom-right-radius: 10px;
+-moz-border-radius-topright: 10px;
+-moz-border-radius-bottomright: 10px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+#searchBtn:hover{
+background: f6e049;
+}
+body{
+font-family: #f6e049;
+}
+h3
+{ margin: 20px 0px 0px 0px;
+padding:0;
+}
+p{
+margin: 0;
+padding: 0;
+}
+</style>
+</head>
+<body>
+   <form action= "search.php" method= "GET" />
+   <input type= "text" name= "q" value= "Search..." id= "searchBar" placeholder= ""  maxlength= "25" autocomplete="off" onMouseDown= "active();" onBlur= "inactive();"/><input type="submit" id="searchBtn" value="Go!"/>
+</form>
+</body>
+</html>
