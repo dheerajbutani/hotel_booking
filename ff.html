@@ -1,0 +1,83 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> FEEDBACK
+</title>
+<link rel="stylesheet" type="text/css" href="home.css">
+<script>
+function validate(){
+    if(document.formFeedback.name.value == "" ||
+    document.formFeedback.email.value == "" ||
+    document.formFeedback.comment.value == "" )
+    {
+        alert("Please fill all the boxes before submitting!");
+       return false;
+    } 
+var email = document.formFeedback.email.value;
+atpos = email.indexOf("@");
+dotpos = email.lastIndexOf(".");
+if (email == "" || atpos < 1 || ( dotpos - atpos < 2 )) 
+{
+alert("Please enter correct email ID");
+document.formFeedback.email.focus() ;
+return false;
+}
+
+
+
+else { 
+ alert('Your comment has been submitted!');
+
+return true;}
+
+
+}
+
+</script>
+<style> 
+#body {
+   background: url("7023672-blurred-background.jpg") no-repeat;
+background-size: cover;
+width: 99.7%  ;
+height: 80%;
+border=solid;
+opacity: 1;
+ filter: alpha(opacity=5);
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+</style>
+</head>
+
+<body bgcolor="#E6E6FB" >
+<div id="body">
+<h1>FEEDBACKS</h1>
+
+
+<form onsubmit="return validate();" name="formFeedback" action="addcomment.php" method="post">
+<label>name:
+<input type="text" name="name"></label><br>
+<label>email: <input type="text" name="email"></label><br>
+<label>comment:<br><input type="text" name="comment" style=" height: 40px; width:280px; "></label><br>
+
+
+
+
+
+<label><input type="submit" value="Add Comment"></label>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</form>
+</body>
+</html>
