@@ -1,5 +1,3 @@
-<?php
-session_start(); ?>
 
 <!DOCTYPE html>
 <html>
@@ -70,11 +68,7 @@ a.part:active {
 <a href="feedback.php" target="_blank" class ="buttonl">FEEDBACK</a>
 <a href="avail.html" target="_blank" class ="buttonl">CHECK AVAILABILITY</a>
 <a href="usersignup.html" target="_blank" class ="buttonl" style="float:right">SIGNUP</a>
-<?php if(isset($_SESSION['userid'])){ ?>
-  <a href="logout.php" target="_blank" class = "button1">logout</a>
-<?php }else{ ?>
-  <a  href="exampl/index.php" target="_blank" class="button1">login</a>
-<?php } ?>
+
 
 
 
